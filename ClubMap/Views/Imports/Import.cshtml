@@ -1,0 +1,74 @@
+﻿@model ClubMap.Models.ImportViewModel
+@{
+    ViewBag.Title = "Import";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Import</h2>
+
+<div class="container body-content">
+    <h3>@ViewBag.Title</h3>
+    <div class="form-group">
+        <h4>Warning!<br />Import excel file clear database. Are you sure?</h4>
+        @using (Html.BeginForm("ImportFixedClubData", "Imports", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            @*@Html.AntiForgeryToken()*@
+            @Html.LabelFor(model => model.FixedClubDataFile, "Excel file with fixed club data", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FixedClubDataFile, new
+            {
+                type = "file",
+                @class = "form-control",
+                @onchange = "checkfile(this);",
+                @accept = "application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            })
+            @Html.ValidationMessageFor(model => model.FixedClubDataFile, "", new { @class = "text-danger", })
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Import
+                    </button>
+                </div>
+            </div>
+        }
+        <hr/>
+        <br/>
+        @using (Html.BeginForm("ImportVariableClubData", "Imports", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            @*@Html.AntiForgeryToken()*@
+            @Html.LabelFor(model => model.VariableClubDataFile, "Excel file with variable club data", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.VariableClubDataFile, new
+            {
+                type = "file",
+                @class = "form-control",
+                @onchange = "checkfile(this);",
+                @accept = "application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            })
+            @Html.ValidationMessageFor(model => model.VariableClubDataFile, "", new { @class = "text-danger", })
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Import
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section scripts
+{
+    <script>
+        function checkfile(sender) {
+            var validExts = new Array(".xlsx", ".xls");
+            var fileExt = sender.value;
+            fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+            if (validExts.indexOf(fileExt) < 0) {
+                alert("Invalid file selected, valid files are of " +
+                         validExts.toString() + " types.");
+                return false;
+            }
+            else return true;
+        }
+    </script>
+}

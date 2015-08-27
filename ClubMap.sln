@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubMap", "ClubMap\ClubMap.csproj", "{A7550581-2FA7-4700-A031-814D0E4E6491}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57F1A852-1EE7-46A2-BF67-C45CFE71243A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|x64.ActiveCfg = Debug|x64
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|x64.Build.0 = Debug|x64
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|x86.ActiveCfg = Debug|x86
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Debug|x86.Build.0 = Debug|x86
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|x64.ActiveCfg = Release|x64
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|x64.Build.0 = Release|x64
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|x86.ActiveCfg = Release|x86
+		{A7550581-2FA7-4700-A031-814D0E4E6491}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
